@@ -17,13 +17,20 @@ Code
 There are 3 parts in this project. Kmedoids, Imputation, and Main. 
 
 Kmedoids.py :
+
 It is based on numpy and contains the K-Medoids algorithm. Kmedoids.py has 5 functions. 
+
 KMedoids is the main function. It requires 3 inputs: cluster number, X_obs dataset, and times. It return 2 dataset: ‘centers’, in which contains the index of medoids; and ‘result_cluster’, in which contains the cluster information for every record in X_obs.
-    An example of ‘centers’(k =3 ): [23 32 45]
+
+An example of ‘centers’(k =3 ): [23 32 45]   
+
 An example of ‘result_cluster’(k= 3, datasize = 10):[0 0 2 0 1 2 2 1 0 2]	
+
 Initialize_centers is the function for step 2 of the algorithm, it requires a number of clustes k,and uses global to get the size of X_obs . It returns a list contains randomly selected indexes of medoids. 
+
 Clus_process is the function for step 3. It requires 2 inputs: a ‘centers ’  from Initialize_centers or chose_centers; and X_obs dataset. And it returns ‘result_cluster’
 Count_E is the function to calculate the cost. It requires 3 inputs: ‘centers’, X_obs dataset and ‘result_cluster’. And it return the cost.
+
 Choose_centers is the function for step 5. It requires 2 inputs: ’result_cluster’ and the number of the clusters. And it returns a new sets of ‘centers’.
 
 Imputation.py:
